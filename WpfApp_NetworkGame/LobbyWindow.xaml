@@ -1,0 +1,23 @@
+﻿<Window x:Class="WpfApp_NetworkGame.LobbyWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp_NetworkGame"
+        mc:Ignorable="d"
+        Title="LobbyWindow" Height="318.629" Width="475.747">
+	<Grid>
+		<Grid.Background>
+			<ImageBrush Opacity="0.8" ImageSource="CardImg/Default/forest_house.jpg"/>
+		</Grid.Background>
+		<ListBox ScrollViewer.CanContentScroll="True" x:Name="JoinClientList" HorizontalAlignment="Left" Height="250" Margin="10,10,0,0" VerticalAlignment="Top" Width="215" Background="{x:Null}" BorderBrush="Black"/>
+		<Button Content="接受挑戰" HorizontalAlignment="Left" Margin="258,218,0,0" VerticalAlignment="Top" Width="178" Height="46" Click="SendPermit" FontSize="20" Foreground="White">
+			<Button.Background>
+				<ImageBrush ImageSource="CardImg/Default/boardBTN.jpg"/>
+			</Button.Background>
+		</Button>
+		<Label x:Name="HostInfo" Content="Host Info" HorizontalAlignment="Left" Margin="258,22,0,0" VerticalAlignment="Top" Width="178" Height="98" Foreground="Black"/>
+		<Label x:Name="yourInfo" Content="Your Info" HorizontalAlignment="Left" Margin="258,125,0,0" VerticalAlignment="Top" Width="178" Height="88" Foreground="Black"/>
+
+	</Grid>
+</Window>

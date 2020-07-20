@@ -1,0 +1,32 @@
+﻿<Window x:Class="WpfApp_NetworkGame.IPConfirmWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp_NetworkGame"
+        mc:Ignorable="d"
+        Title="IPConfirmWindow" Height="248.553" Width="435.263">
+	<Grid>
+		<Grid.Background>
+			<ImageBrush Opacity="0.8" ImageSource="CardImg/Default/forest_trees.jpg"/>
+		</Grid.Background>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition/>
+			<ColumnDefinition Width="0*"/>
+		</Grid.ColumnDefinitions>
+		<TextBox x:Name="ipIN" HorizontalAlignment="Left" Height="23" Margin="70,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="283"/>
+		<Button x:Name="JoinIP" Content="發起挑戰" HorizontalAlignment="Left" Margin="70,77,0,0" VerticalAlignment="Top" Width="139" Click="JoinIP_Click" Height="31" Foreground="White">
+			<Button.Background>
+				<ImageBrush ImageSource="CardImg/Default/boardBTN.jpg"/>
+			</Button.Background>
+		</Button>
+		<Label x:Name="Conditionlabel" Content="Condition Label" Margin="10,47,10,0" VerticalAlignment="Top" HorizontalContentAlignment="Center"/>
+		<Button x:Name="LeaveIP" Content="取消挑戰" HorizontalAlignment="Left" Margin="214,77,0,0" VerticalAlignment="Top" Width="139" Click="LeaveIP_Click" Height="31" Foreground="White">
+			<Button.Background>
+				<ImageBrush ImageSource="CardImg/Default/boardBTN.jpg"/>
+			</Button.Background>
+		</Button>
+		<Label x:Name="yourInfo" Content="Your Info" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="10,129,0,0" VerticalAlignment="Top" Width="407" Height="84"/>
+
+	</Grid>
+</Window>

@@ -1,0 +1,83 @@
+﻿<Window x:Class="WpfApp_NetworkGame.GameWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp_NetworkGame"
+        mc:Ignorable="d"
+        Title="GameWindow" Height="709.682" Width="1012.281">
+	<Grid>
+		<Grid.Background>
+			<ImageBrush Opacity="0.88" ImageSource="CardImg/Default/forest_battle.jpg"/>
+		</Grid.Background>
+		<Line X1="67" Y1="350" X2="500" Y2="350" Stroke="#FF931717" StrokeThickness="3"></Line>
+		<Line X1="500" Y1="350" X2="500" Y2="325" Stroke="#FF931717" StrokeThickness="3"></Line>
+		<Line X1="500" Y1="325" X2="500" Y2="295" Stroke="Green" StrokeThickness="3"></Line>
+		<Line X1="500" Y1="295" X2="923" Y2="295" Stroke="Green" StrokeThickness="3"></Line>
+		<Image x:Name="en1" HorizontalAlignment="Left" Height="230" Margin="67,24,0,0" VerticalAlignment="Top" Width="157" Source="CardImg/Default/back.jpg"/>
+		<Image x:Name="en2" HorizontalAlignment="Left" Height="230" Margin="248,24,0,0" VerticalAlignment="Top" Width="157" Source="CardImg/Default/back.jpg"/>
+		<Image x:Name="en3" HorizontalAlignment="Left" Height="230" Margin="421,24,0,0" VerticalAlignment="Top" Width="157" Source="CardImg/Default/back.jpg"/>
+		<Image x:Name="en4" HorizontalAlignment="Left" Height="230" Margin="594,24,0,0" VerticalAlignment="Top" Width="157" Source="CardImg/Default/back.jpg"/>
+		<Image x:Name="en5" HorizontalAlignment="Left" Height="230" Margin="767,24,0,0" VerticalAlignment="Top" Width="157" Source="CardImg/Default/back.jpg"/>
+		<Image x:Name="my1" HorizontalAlignment="Left" Height="230" Margin="67,386,0,0" VerticalAlignment="Top" Width="157" Source="CardImg/Default/back.jpg"/>
+		<Image x:Name="my2" HorizontalAlignment="Left" Height="230" Margin="248,386,0,0" VerticalAlignment="Top" Width="157" Source="CardImg/Default/back.jpg"/>
+		<Image x:Name="my3" HorizontalAlignment="Left" Height="230" Margin="421,386,0,0" VerticalAlignment="Top" Width="157" Source="CardImg/Default/back.jpg"/>
+		<Image x:Name="my4" HorizontalAlignment="Left" Height="230" Margin="594,386,0,0" VerticalAlignment="Top" Width="157" Source="CardImg/Default/back.jpg"/>
+		<Image x:Name="my5" HorizontalAlignment="Left" Height="230" Margin="767,386,0,0" VerticalAlignment="Top" Width="157" Source="CardImg/Default/back.jpg"/>
+		<Label x:Name="enPts" Content="280" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="233,268,0,0" VerticalAlignment="Top" Width="202" Height="69" FontSize="50" FontWeight="Bold" FontFamily="Segoe UI Black" Foreground="#FF931717"/>
+		<Label Name="enemyName" Content="enemy" HorizontalAlignment="Left" Margin="67,299,0,0" VerticalAlignment="Top" FontSize="20" Width="131"/>
+		<Label Name="yourName" Content="player" HorizontalContentAlignment="Right" HorizontalAlignment="Left" Margin="793,324,0,0" VerticalAlignment="Top" FontSize="20" Width="131"/>
+		<Label x:Name="myPts" Content="310" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="583,290,0,0" VerticalAlignment="Top" Width="202" Height="69" FontSize="50" FontWeight="Bold" FontFamily="Segoe UI Black" Foreground="#FF6DF16D"/>
+		<Image x:Name="check1" HorizontalAlignment="Left" Height="56" Margin="67,473,0,0" VerticalAlignment="Top" Width="157" Source="CardImg/Default/SEGA_logo.png" RenderTransformOrigin="0.5,0.5">
+			<Image.RenderTransform>
+				<TransformGroup>
+					<ScaleTransform/>
+					<SkewTransform/>
+					<RotateTransform Angle="-40.509"/>
+					<TranslateTransform/>
+				</TransformGroup>
+			</Image.RenderTransform>
+		</Image>
+		<Image x:Name="check2" HorizontalAlignment="Left" Height="56" Margin="248,473,0,0" VerticalAlignment="Top" Width="157" Source="CardImg/Default/SEGA_logo.png" RenderTransformOrigin="0.5,0.5">
+			<Image.RenderTransform>
+				<TransformGroup>
+					<ScaleTransform/>
+					<SkewTransform/>
+					<RotateTransform Angle="-39.654"/>
+					<TranslateTransform/>
+				</TransformGroup>
+			</Image.RenderTransform>
+		</Image>
+		<Image x:Name="check3" HorizontalAlignment="Left" Height="56" Margin="421,473,0,0" VerticalAlignment="Top" Width="157" Source="CardImg/Default/SEGA_logo.png" RenderTransformOrigin="0.5,0.5">
+			<Image.RenderTransform>
+				<TransformGroup>
+					<ScaleTransform/>
+					<SkewTransform/>
+					<RotateTransform Angle="-40.436"/>
+					<TranslateTransform/>
+				</TransformGroup>
+			</Image.RenderTransform>
+		</Image>
+		<Image x:Name="check4" HorizontalAlignment="Left" Height="56" Margin="594,473,0,0" VerticalAlignment="Top" Width="157" Source="CardImg/Default/SEGA_logo.png" RenderTransformOrigin="0.5,0.5">
+			<Image.RenderTransform>
+				<TransformGroup>
+					<ScaleTransform/>
+					<SkewTransform/>
+					<RotateTransform Angle="-41.882"/>
+					<TranslateTransform/>
+				</TransformGroup>
+			</Image.RenderTransform>
+		</Image>
+		<Image x:Name="check5" HorizontalAlignment="Left" Height="56" Margin="767,473,0,0" VerticalAlignment="Top" Width="157" Source="CardImg/Default/SEGA_logo.png" RenderTransformOrigin="0.5,0.5">
+			<Image.RenderTransform>
+				<TransformGroup>
+					<ScaleTransform/>
+					<SkewTransform/>
+					<RotateTransform Angle="-42.071"/>
+					<TranslateTransform/>
+				</TransformGroup>
+			</Image.RenderTransform>
+		</Image>
+		<Label x:Name="SignalLabel" Content="Label" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="421,303,0,0" VerticalAlignment="Top" Width="157" FontSize="24" Foreground="Black" Background="#FF489F68"/>
+	</Grid>
+</Window>

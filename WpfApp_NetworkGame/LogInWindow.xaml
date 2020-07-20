@@ -1,0 +1,25 @@
+﻿<Window x:Class="WpfApp_NetworkGame.LogInWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp_NetworkGame"
+        mc:Ignorable="d"
+        Title="MushKing" Height="387.597" Width="322.101">
+	<Window.Background>
+		<ImageBrush ImageSource="CardImg/Default/images.png"/>
+	</Window.Background>
+	<Grid>
+		<Grid.Background>
+			<ImageBrush Opacity="0.5" ImageSource="CardImg/Default/images.png"/>
+		</Grid.Background>
+		<Button x:Name="logInBTN" Content="登入" HorizontalAlignment="Left" Margin="88,303,0,0" VerticalAlignment="Top" Width="143" Height="32" FontSize="16" Click="Button_Click"/>
+		<StackPanel HorizontalAlignment="Left" Height="145" Margin="75,85,0,0" VerticalAlignment="Top" Width="173">
+			<Label Content="帳號" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="16" Foreground="White"/>
+			<TextBox x:Name="IDtxt" HorizontalAlignment="Center" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="143" FontSize="16"/>
+			<Label Content="密碼" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="16" Foreground="White"/>
+			<TextBox x:Name="PWtxt" HorizontalAlignment="Center" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="144" FontSize="16"/>
+		</StackPanel>
+
+	</Grid>
+</Window>

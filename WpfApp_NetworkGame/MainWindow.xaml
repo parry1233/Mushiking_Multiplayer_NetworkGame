@@ -1,0 +1,46 @@
+﻿<Window x:Class="WpfApp_NetworkGame.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp_NetworkGame"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="443.757" Width="487.288">
+	<Grid>
+		<Grid.Background>
+			<ImageBrush Opacity="0.8" ImageSource="CardImg/Default/forest.jpg"/>
+		</Grid.Background>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition/>
+			<ColumnDefinition Width="0*"/>
+		</Grid.ColumnDefinitions>
+		<Button Content="開啟房間" HorizontalAlignment="Left" Margin="31,132,0,0" VerticalAlignment="Top" Width="142" Height="41" FontSize="16" Click="CreateHost" Foreground="White">
+			<Button.Background>
+				<ImageBrush ImageSource="CardImg/Default/boardBTN.jpg"/>
+			</Button.Background>
+		</Button>
+		<Button Content="加入房間" HorizontalAlignment="Left" Margin="31,198,0,0" VerticalAlignment="Top" Width="142" Height="41" FontSize="16" Click="JoinRoom" Foreground="White">
+			<Button.Background>
+				<ImageBrush ImageSource="CardImg/Default/boardBTN.jpg"/>
+			</Button.Background>
+		</Button>
+		<Button Content="我的甲蟲" HorizontalAlignment="Left" Margin="31,258,0,0" VerticalAlignment="Top" Width="142" Height="41" FontSize="16" Click="ToTeam" Foreground="White">
+			<Button.Background>
+				<ImageBrush ImageSource="CardImg/Default/boardBTN.jpg"/>
+			</Button.Background>
+		</Button>
+		<Button Content="探索甲蟲" HorizontalAlignment="Left" Margin="31,318,0,0" VerticalAlignment="Top" Width="142" Height="41" FontSize="16" Click="ToShop" Foreground="White">
+			<Button.Background>
+				<ImageBrush ImageSource="CardImg/Default/boardBTN.jpg"/>
+			</Button.Background>
+		</Button>
+		<Label x:Name="UserInfoLabel" Content="歡迎回來! xxx" HorizontalAlignment="Left" Margin="255,23,0,0" VerticalAlignment="Top" Width="176" Height="98" Foreground="Black" Padding="20,20">
+			<Label.Background>
+				<ImageBrush ImageSource="CardImg/Default/labelBoard.jpg"/>
+			</Label.Background>
+		</Label>
+		<Image x:Name="LeaderImg" HorizontalAlignment="Left" Height="261" Margin="255,142,0,0" VerticalAlignment="Top" Width="176" Source="CardImg/Ver1/A001.png"/>
+		<Image HorizontalAlignment="Left" Height="64" Margin="31,23,0,0" VerticalAlignment="Top" Width="142" Source="CardImg/Default/Mushiking_Logo.png"/>
+
+	</Grid>
+</Window>
