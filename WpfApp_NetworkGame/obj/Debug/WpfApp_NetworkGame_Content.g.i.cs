@@ -8,6 +8,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("dataxml/xmlfile1.xml")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("cardimg/default/back1.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("cardimg/default/back2.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("cardimg/default/back3.png")]
 
 

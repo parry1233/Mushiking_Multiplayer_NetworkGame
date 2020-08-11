@@ -28,7 +28,7 @@ namespace WpfApp_NetworkGame
 			try
 			{
 				//埠及IP
-				IPEndPoint ipe = new IPEndPoint(IPAddress.Parse(ip), int.Parse("6666"));
+				IPEndPoint ipe = new IPEndPoint(IPAddress.Parse(ip), int.Parse("10666"));
 				//建立套接字
 				//this.client = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
 				//開始連線到伺服器
@@ -171,7 +171,7 @@ namespace WpfApp_NetworkGame
 										{
 											if (win.GetType() == typeof(GameWindow))
 											{
-												(win as GameWindow).setIMG(instruction[1]);
+												(win as GameWindow).storeChoose(instruction[1]);
 												(win as GameWindow).EnemyChoose(instruction[1]);
 											}
 										}

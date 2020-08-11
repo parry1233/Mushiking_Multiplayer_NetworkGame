@@ -26,7 +26,17 @@ namespace WpfApp_NetworkGame
 		public Server()
 		{
 			this.hostName = Dns.GetHostName();
-			this.localIP = Dns.GetHostAddresses(this.hostName)[1];
+
+			IPAddress ipv4Address;
+			foreach(IPAddress ipa in Dns.GetHostAddresses(this.hostName))
+			{
+				if(ipa.AddressFamily == AddressFamily.InterNetwork)
+				{
+					ipv4Address = ipa;
+					this.localIP = ipv4Address;
+					break;
+				}
+			}
 			this.info = new string[8];
 		}
 
@@ -45,7 +55,7 @@ namespace WpfApp_NetworkGame
 			try
 			{
 				TcpClient tcpClient = new TcpClient();
-				IPEndPoint ipe = new IPEndPoint(localIP, 6666);
+				IPEndPoint ipe = new IPEndPoint(localIP, 10666);
 				this.socketListen = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
 				this.socketListen.Bind(ipe);
 				this.socketListen.Listen(10);
@@ -206,7 +216,7 @@ namespace WpfApp_NetworkGame
 								{
 									if (win.GetType() == typeof(GameWindow))
 									{
-										(win as GameWindow).setIMG(instruction[1]);
+										(win as GameWindow).storeChoose(instruction[1]);
 										(win as GameWindow).EnemyChoose(instruction[1]);
 									}
 								}

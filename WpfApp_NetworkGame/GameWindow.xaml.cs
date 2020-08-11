@@ -31,6 +31,7 @@ namespace WpfApp_NetworkGame
 		public bool imgCheck1 = true, imgCheck2 = true, imgCheck3 = true, imgCheck4 = true, imgCheck5 = true;
 		public string en_card1="", en_card2="", en_card3="", en_card4="", en_card5="";
 		public string my_card1 = "", my_card2 = "", my_card3 = "", my_card4 = "", my_card5 = "";
+		private string tempChooseID = "";
 
 		public GameWindow(bool turn_check)
 		{
@@ -48,6 +49,13 @@ namespace WpfApp_NetworkGame
 			check4.Visibility = Visibility.Collapsed;
 			check5.Visibility = Visibility.Collapsed;
 			checkTurn();
+
+			en_choose1.Visibility = Visibility.Collapsed;
+			en_choose2.Visibility = Visibility.Collapsed;
+			en_choose3.Visibility = Visibility.Collapsed;
+			en_choose4.Visibility = Visibility.Collapsed;
+			en_choose5.Visibility = Visibility.Collapsed;
+
 		}
 
 		public void setYours(string name,string id,string card1,string card2,string card3,string card4,string card5)
@@ -79,43 +87,150 @@ namespace WpfApp_NetworkGame
 			this.en_card3 = card3;
 			this.en_card4 = card4;
 			this.en_card5 = card5;
-			/*
-			string en_convert1 = "CardImg/Ver1/" + card1 + ".png";
-			string en_convert2 = "CardImg/Ver1/" + card2 + ".png";
-			string en_convert3 = "CardImg/Ver1/" + card3 + ".png";
-			string en_convert4 = "CardImg/Ver1/" + card4 + ".png";
-			string en_convert5 = "CardImg/Ver1/" + card5 + ".png";
-			en1.Source = new BitmapImage(new Uri(@en_convert1, UriKind.Relative));
-			en2.Source = new BitmapImage(new Uri(@en_convert2, UriKind.Relative));
-			en3.Source = new BitmapImage(new Uri(@en_convert3, UriKind.Relative));
-			en4.Source = new BitmapImage(new Uri(@en_convert4, UriKind.Relative));
-			en5.Source = new BitmapImage(new Uri(@en_convert5, UriKind.Relative));
-			*/
+
+			if(Convert.ToInt32(this.xmlData.getCardInfo(this.en_card1)[2])==180)
+			{
+				en1.Source = new BitmapImage(new Uri("CardImg/Default/back1.png", UriKind.Relative));
+			}
+			else if(Convert.ToInt32(this.xmlData.getCardInfo(this.en_card1)[2]) == 210)
+			{
+				en1.Source = new BitmapImage(new Uri("CardImg/Default/back2.png", UriKind.Relative));
+			}
+			else if (Convert.ToInt32(this.xmlData.getCardInfo(this.en_card1)[2]) == 260)
+			{
+				en1.Source = new BitmapImage(new Uri("CardImg/Default/back3.png", UriKind.Relative));
+			}
+			else if (Convert.ToInt32(this.xmlData.getCardInfo(this.en_card1)[2]) == 300)
+			{
+				en1.Source = new BitmapImage(new Uri("CardImg/Default/back4.png", UriKind.Relative));
+			}
+			//
+			if (Convert.ToInt32(this.xmlData.getCardInfo(this.en_card2)[2]) == 180)
+			{
+				en2.Source = new BitmapImage(new Uri("CardImg/Default/back1.png", UriKind.Relative));
+			}
+			else if (Convert.ToInt32(this.xmlData.getCardInfo(this.en_card2)[2]) == 210)
+			{
+				en2.Source = new BitmapImage(new Uri("CardImg/Default/back2.png", UriKind.Relative));
+			}
+			else if (Convert.ToInt32(this.xmlData.getCardInfo(this.en_card2)[2]) == 260)
+			{
+				en2.Source = new BitmapImage(new Uri("CardImg/Default/back3.png", UriKind.Relative));
+			}
+			else if (Convert.ToInt32(this.xmlData.getCardInfo(this.en_card2)[2]) == 300)
+			{
+				en2.Source = new BitmapImage(new Uri("CardImg/Default/back4.png", UriKind.Relative));
+			}
+			//
+			if (Convert.ToInt32(this.xmlData.getCardInfo(this.en_card3)[2]) == 180)
+			{
+				en3.Source = new BitmapImage(new Uri("CardImg/Default/back1.png", UriKind.Relative));
+			}
+			else if (Convert.ToInt32(this.xmlData.getCardInfo(this.en_card3)[2]) == 210)
+			{
+				en3.Source = new BitmapImage(new Uri("CardImg/Default/back2.png", UriKind.Relative));
+			}
+			else if (Convert.ToInt32(this.xmlData.getCardInfo(this.en_card3)[2]) == 260)
+			{
+				en3.Source = new BitmapImage(new Uri("CardImg/Default/back3.png", UriKind.Relative));
+			}
+			else if (Convert.ToInt32(this.xmlData.getCardInfo(this.en_card3)[2]) == 300)
+			{
+				en3.Source = new BitmapImage(new Uri("CardImg/Default/back4.png", UriKind.Relative));
+			}
+			//
+			if (Convert.ToInt32(this.xmlData.getCardInfo(this.en_card4)[2]) == 180)
+			{
+				en4.Source = new BitmapImage(new Uri("CardImg/Default/back1.png", UriKind.Relative));
+			}
+			else if (Convert.ToInt32(this.xmlData.getCardInfo(this.en_card4)[2]) == 210)
+			{
+				en4.Source = new BitmapImage(new Uri("CardImg/Default/back2.png", UriKind.Relative));
+			}
+			else if (Convert.ToInt32(this.xmlData.getCardInfo(this.en_card4)[2]) == 260)
+			{
+				en4.Source = new BitmapImage(new Uri("CardImg/Default/back3.png", UriKind.Relative));
+			}
+			else if (Convert.ToInt32(this.xmlData.getCardInfo(this.en_card4)[2]) == 300)
+			{
+				en4.Source = new BitmapImage(new Uri("CardImg/Default/back4.png", UriKind.Relative));
+			}
+			//
+			if (Convert.ToInt32(this.xmlData.getCardInfo(this.en_card5)[2]) == 180)
+			{
+				en5.Source = new BitmapImage(new Uri("CardImg/Default/back1.png", UriKind.Relative));
+			}
+			else if (Convert.ToInt32(this.xmlData.getCardInfo(this.en_card5)[2]) == 210)
+			{
+				en5.Source = new BitmapImage(new Uri("CardImg/Default/back2.png", UriKind.Relative));
+			}
+			else if (Convert.ToInt32(this.xmlData.getCardInfo(this.en_card5)[2]) == 260)
+			{
+				en5.Source = new BitmapImage(new Uri("CardImg/Default/back3.png", UriKind.Relative));
+			}
+			else if (Convert.ToInt32(this.xmlData.getCardInfo(this.en_card5)[2]) == 300)
+			{
+				en5.Source = new BitmapImage(new Uri("CardImg/Default/back4.png", UriKind.Relative));
+			}
 		}
 
-		public void setIMG(string cardID)
+		public void storeChoose(string id)
 		{
-			string uri = "CardImg/Ver1/" + cardID + ".png";
-			if (cardID.Equals(this.en_card1))
+			this.tempChooseID = id;
+			if (this.tempChooseID.Equals(this.en_card1))
+			{
+				en_choose1.Visibility = Visibility.Visible;
+			}
+			else if (this.tempChooseID.Equals(this.en_card2))
+			{
+				en_choose2.Visibility = Visibility.Visible;
+			}
+			else if (this.tempChooseID.Equals(this.en_card3))
+			{
+				en_choose3.Visibility = Visibility.Visible;
+			}
+			else if (this.tempChooseID.Equals(this.en_card4))
+			{
+				en_choose4.Visibility = Visibility.Visible;
+			}
+			else if (this.tempChooseID.Equals(this.en_card5))
+			{
+				en_choose5.Visibility = Visibility.Visible;
+			}
+		}
+
+		public void showEnCard()
+		{
+			en_choose1.Visibility = Visibility.Collapsed;
+			en_choose2.Visibility = Visibility.Collapsed;
+			en_choose3.Visibility = Visibility.Collapsed;
+			en_choose4.Visibility = Visibility.Collapsed;
+			en_choose5.Visibility = Visibility.Collapsed;
+
+			string uri = "CardImg/Ver1/" + this.tempChooseID + ".png";
+
+			if (this.tempChooseID.Equals(this.en_card1))
 			{
 				en1.Source = new BitmapImage(new Uri(@uri, UriKind.Relative));
 			}
-			else if(cardID.Equals(this.en_card2))
+			else if(this.tempChooseID.Equals(this.en_card2))
 			{
 				en2.Source = new BitmapImage(new Uri(@uri, UriKind.Relative));
 			}
-			else if (cardID.Equals(this.en_card3))
+			else if (this.tempChooseID.Equals(this.en_card3))
 			{
 				en3.Source = new BitmapImage(new Uri(@uri, UriKind.Relative));
 			}
-			else if (cardID.Equals(this.en_card4))
+			else if (this.tempChooseID.Equals(this.en_card4))
 			{
 				en4.Source = new BitmapImage(new Uri(@uri, UriKind.Relative));
 			}
-			else if (cardID.Equals(this.en_card5))
+			else if (this.tempChooseID.Equals(this.en_card5))
 			{
 				en5.Source = new BitmapImage(new Uri(@uri, UriKind.Relative));
 			}
+
+			this.tempChooseID = "";
 		}
 
 		public void checkTurn()
@@ -207,6 +322,7 @@ namespace WpfApp_NetworkGame
 		{
 			if((this.enLog.Count==this.youLog.Count)&&this.enLog.Count>0&&this.youLog.Count>0)
 			{
+				showEnCard();
 				string[] enemyCard = this.xmlData.getCardInfo(this.enLog[enLog.Count-1]);
 				string[] yourCard = this.xmlData.getCardInfo(this.youLog[youLog.Count-1]);
 				if (yourCard[3].Equals("Pap"))

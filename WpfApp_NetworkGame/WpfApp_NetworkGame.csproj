@@ -224,5 +224,16 @@
   <ItemGroup>
     <Resource Include="CardImg\Default\forest_battle.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="CardImg\Default\beetle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="CardImg\Default\back1.png" />
+    <Resource Include="CardImg\Default\back2.png" />
+    <Resource Include="CardImg\Default\back3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="CardImg\Default\back4.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
