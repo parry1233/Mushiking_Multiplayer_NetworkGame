@@ -11,11 +11,15 @@ namespace WpfApp_NetworkGame
 {
 	class database
 	{
-		static string dbHost = "ccuigo.mysql.database.azure.com";
+		static string dbHost = "127.0.0.1";
+		static string dbPort = "3306";
+		static string dbUser = "parry1233";
+		static string dbPass = "parry1233";
+		/*static string dbHost = "ccuigo.mysql.database.azure.com";
 		static string dbPort = "3306";
 		static string dbUser = "parry1233@ccuigo";
-		static string dbPass = "Parry1000033";
-		static string dbName = "mushking";
+		static string dbPass = "Parry1000033";*/
+		static string dbName = "mushiking";
 		static string conn_info = "server=" + dbHost + ";port=" + dbPort + ";user=" + dbUser + ";password=" + dbPass + ";database=" + dbName + ";charset=utf8;oldguids=true;";
 		public database()
 		{

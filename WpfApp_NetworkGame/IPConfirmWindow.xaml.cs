@@ -35,7 +35,7 @@ namespace WpfApp_NetworkGame
 			this.info = infoIn;
 			yourInfo.Content = "[你的個人資訊]\r\n用戶名稱: " + this.info[7].Split('/')[0]
 				+ "\r\n用戶戰績: " + this.info[5].Split('/')[0] + "勝 " + this.info[5].Split('/')[1] + "敗 " + this.info[5].Split('/')[2] + "和"
-				+ "\r\n用戶隊長: " + this.info[3] + "\r\n用戶餘額: " + this.info[8];
+				+ "\r\n用戶稱號: " + this.info[3] + "\r\n用戶餘額: " + this.info[8];
 		}
 
 		private void JoinIP_Click(object sender, RoutedEventArgs e)
